@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+	
+<head>
+	<title>File Import</title>
+	<!-- jQuery Mobile setup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mylibs/jQueryMobile/jquery.mobile-1.0.1.min.css" />
+    <script src="mylibs/jquery-1.7.1.min.js"></script>
+    <script src="mylibs/jQueryMobile/jquery.mobile-1.0.1.min.js"></script>
+	<!-- Phonegap setup -->
+	<script type="text/javascript" charset="utf-8" src="mylibs/cordova-1.5.0.js"></script>
+	
+	<link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" charset="utf-8" src="js/script.js"></script>
+
+	<link rel="stylesheet" href="../themes/Mobile1.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.structure-1.3.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+        <script src="my.js">
+        </script>
+		<script type="text/javascript"> // When ready...
+		window.addEventListener("load",function() {
+		  // Set a timeout...
+		  setTimeout(function(){
+			// Hide the address bar!
+			window.scrollTo(0, 1);
+		  }, 0);
+		});
+		</script>
+
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+
+<script type="text/javascript" src="../js/plupload.js"></script>
+<script type="text/javascript" src="../js/plupload.gears.js"></script>
+<script type="text/javascript" src="../js/plupload.silverlight.js"></script>
+<script type="text/javascript" src="../js/plupload.flash.js"></script>
+<script type="text/javascript" src="../js/plupload.browserplus.js"></script>
+<script type="text/javascript" src="../js/plupload.html4.js"></script>
+<script type="text/javascript" src="../js/plupload.html5.js"></script>
+
+<script type="text/javascript" src="../js/jquery.mobile.utils.js"></script>
+
+<script type="text/javascript">
+function showDiv() {
+   document.getElementById('Checksum').style.display = "block";
+}
+</script>
+<!-- <script type="text/javascript"  src="http://getfirebug.com/releases/lite/1.2/firebug-lite-compressed.js"></script> -->
+
+<!-- Flowplayer -->
+<!-- 1. jquery library -->
+<script
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js">
+</script>
+ 
+<!-- 2. flowplayer -->
+<script src="http://releases.flowplayer.org/5.3.2/flowplayer.min.js"></script>
+ 
+<!-- 3. skin -->
+<link rel="stylesheet" type="text/css"
+   href="http://releases.flowplayer.org/5.3.2/skin/minimalist.css" />
+</head>
+
+<body>
+
+<div id="explore" data-role="page">
+      <div data-role="header" data-position="fixed">
+            <a id="backBtn" href="../index.html#hHome" data-icon="arrow-l">Back</a>
+            <h1>File Explorer</h1>
+            <a id="homeBtn" href="../index.html" data-icon="home" data-transition="pop">Home</a>
+      </div>
+      <div data-role="content">
+            <h2>Folder</h2>
+
+<div class="ui-grid-c" id="dirContent">
+    <div class="ui-block-a">
+        <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide" href="#sb-a" data-icon="#Home" data-iconpos="left" class="ui-btn-right"><div class="folder"><p>strongbox-1.7.5.42.0</p></div></a>
+    </div>
+    
+    <div class="ui-block-b">
+        <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide" href="#sb-a" data-icon="#Home" data-iconpos="left" class="ui-btn-right"><div class="folder"><p>strongbox-1.7.7.17.0</p></div></a>
+    </div>
+    
+    <div class="ui-block-c">
+        <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide" href="#sb-a" data-icon="#Home" data-iconpos="left" class="ui-btn-right"><div class="folder"><p>strongbox-1.7.9.24.0</p></div></a>
+    </div>
+
+</div> 
+      </div>
+</div>
+
+<div id="menuOptions" data-role="page">
+	<div data-role="header">
+            <h1>Choose</h1>
+      </div>
+      <div data-role="content">
+      	<input type="button" id="openBtn" data-theme="e" value="Open">
+      	<input type="button" id="copyBtn" value="Copy">
+      	<input type="button" id="moveBtn" value="Move">
+      	<input type="button" id="pasteBtn" value="Paste" disabled>
+      	<input type="button" id="deleteBtn" value="Delete">
+      </div>
+</div>
+
+<div id="fileDetails" data-role="page">
+	<div data-role="header">
+            <h1>File</h1>
+      </div>
+      <div id="file_details" data-role="content"></div>
+</div>
+
+
+<!--START File Browser -->
+<div data-role="page" id="sb-a">
+      <div data-role="header" data-position="fixed">
+            <a id="backBtn" href="../index.html#hHome" data-icon="arrow-l">Back</a>
+            <h1>File Explorer</h1>
+            <a id="homeBtn" href="../index.html" data-icon="home" data-transition="pop">Home</a>
+      </div>
+
+                <!-- next row -->
+    <div class="ui-block-a">
+<div class="folder"><p>strongbox-1.7.5.42.0</p></div>
+    </div>
+    <div class="ui-block-b">
+        <div class="file"><p><a href="#preview2">file-01.data</a></p></div>
+        <div class="file"><p>file-01.sha512sum</p></div>
+        <div class="file"><p>file-02.data</p></div>
+        <div class="file"><p>file-02.sha512sum</p></div>
+        <div class="file"><p>file-03.data</p></div>
+        <div class="file"><p>file-03.sha512sum</p></div>
+        <div class="file"><p>file-04.data</p></div>
+        <div class="file"><p>file-04.sha512sum</p></div>    
+        <div class="file"><p>file-05.data</p></div>
+        <div class="file"><p>file-05.sha512sum</p></div>
+        <div class="file"><p>file-06.data</p></div>
+        <div class="file"><p>file-06.sha512sum</p></div>
+        <div class="file"><p>file-07.data</p></div>
+        <div class="file"><p>file-07.sha512sum</p></div>
+        <div class="file"><p>file-08.data</p></div>
+        <div class="file"><p>file-08.sha512sum</p></div>
+        <div class="file"><p>file-09.data</p></div>
+        <div class="file"><p>file-09.sha512sum</p></div>
+        <div class="file"><p>file-10.data</p></div>
+        <div class="file"><p>file-10.sha512sum</p></div>
+  </div>
+
+<!--
+    <div class="ui-block-c">
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+        <p>104857616</p>
+        <p>143</p>
+  </div>
+
+    <div class="ui-block-d">
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+        <p>03/18/13 14:54:08 CDT</p>
+  </div>
+-->
+
+<div data-theme="a" data-role="footer" data-position="fixed">
+                <h3>
+                    Connected to: sbox-ws-001
+                </h3>
+            </div>
+</div>
+<!--END File Browser -->
+
+
+
+<!--START Preview Media-->
+<div data-role="page" id="preview2">
+
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide" href="#media" data-icon="back" data-iconpos="left" class="ui-btn-right">
+                    back
+                </a>
+                <h3 id="preview">
+                    Preview Media
+                </h3>
+            </div>
+    <div data-role="content">
+    <center><img src="images/sb_logo.png"></center>
+
+    <!-- Flowplayer -->   
+    <div class="flowplayer">
+       <video>
+          <source type="video/mp4" src="video/prod-for-case-study.mp4"/>
+       </video>
+    </div>
+     <!-- Flowplayer --> 
+ 
+    </div>
+<div data-theme="a" data-role="footer" data-position="fixed">
+               
+File Name: VideoSample1.mxf<br/>
+Size: 1234MB<br/>
+Date: 02/28/2013<br/>
+Checksum: 83ab1340c83de32
+                
+            </div>
+</div>
+<!--END Preview Media -->
+
+</body>
+
+</html>

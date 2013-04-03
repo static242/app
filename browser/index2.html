@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="Author" content="Crossroads UI Team" />
+  <meta name="Copyright" content="Copyright (c) 2007-2009, Crossroads Systems, Inc. All rights reserved." />
+  <title>StrongBox T1 | mixed_data</title>
+  <link href="css/alternative.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/print.css" media="print" rel="stylesheet" type="text/css" />
+  <link href="css/modalbox.css" media="all" rel="stylesheet" type="text/css" />
+  <!--[if IE 6]>
+  <link href="css/ie6_compat.css" media="all" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <!--[if IE 7]>
+  <link href="css/ie7_compat.css" media="all" rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <link href="css/wizard.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/filter.css" media="all" rel="stylesheet" type="text/css" />
+
+  <link href="css/crossroads.css" media="all" rel="stylesheet" type="text/css" />
+
+  
+    <link href="css/file_navigation.css" media="all" rel="stylesheet" type="text/css" />
+
+
+  <script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/datepicker.js" type="text/javascript"></script>
+<script src="js/filter.js" type="text/javascript"></script>
+
+  <script src="js/prototype.js" type="text/javascript"></script>
+  <script src="js/application.js" type="text/javascript"></script>
+<script src="js/application_jquery.js" type="text/javascript"></script>
+  <script src="js/scriptaculous.js" type="text/javascript"></script>
+  <script src="js/modalbox.js" type="text/javascript"></script>
+  <script src="js/lists-ajax.js" type="text/javascript"></script>
+  <script src="js/glider.js" type="text/javascript"></script>
+  <script src="js/app-overrides.js" type="text/javascript"></script>
+  <script src="js/livepipe.js" type="text/javascript"></script>
+  <script src="js/window.js" type="text/javascript"></script>
+
+  
+    <script src="js/lazy_collection.js" type="text/javascript"></script>
+<script src="js/file_navigation.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+//<![CDATA[
+blackboard_updater = new PeriodicalExecuterToggled(function() {new Ajax.Request('/blackboard/update', {asynchronous:true, evalScripts:true})}, 30, true, 15)
+//]]>
+</script>
+
+  <script type="text/javascript" charset="utf-8">
+    (function($){
+      if (true)
+          $(function(){
+              Menu.setup("#navigation > ul#primary > li");
+              $.ajax( {url: '/blackboard/update',
+                       dataType: "script"});
+          });
+    })(jQuery);
+  </script>
+
+  
+
+</head>
+<body id="crossroads">
+<!-- ========================================== HEADER BEGINS ============================================ -->
+  <div id="ajax_busy" style="display:none;"><img alt="Indicator" src="/images/indicator.gif" /></div>
+
+  
+  <div id="header" class="noprint" style='background: url(/images/nimbus_banner_bkg.gif) repeat-x'>
+    <a href="/home/view"><img alt="Product Logo" id="logo" src="/images/nimbus_banner.png" /></a>
+  </div>
+  
+  <div id="userlogin" class="noprint">
+    <span>
+      
+        Logged in as
+        <a href="/users/profile">admin@SBX-UIDEV5</a>
+        |&nbsp;<a href="/users/profile">My Profile</a>&nbsp;|
+        <a href="/users/logout">Logout</a>
+
+      
+    </span>
+  </div>
+
+  <!-- ======================================== TIPS CONTENT STARTS =========================================== -->
+
+
+    <div id="tipicon" onclick="crossroads.toggle_tips()">
+      <img alt="Btn_tips" id="tipicon_img" onmouseout="crossroads.tip_out()" onmouseover="crossroads.tip_over()" src="/images/btn_tips.png" title="Tips" />
+    </div>
+
+
+  <!-- ========================================= TIPS CONTENT ENDS ============================================ -->
+
+  <!-- ====================================== PRODUCT SPECIFIC CHECK ========================================== -->
+
+  
+  
+  <!-- ====================================== STANDARD NAVIGATION BEGINS ======================================== -->
+
+    <div id="navigation" class="noprint">
+
+
+        <ul id="primary">
+          
+  <li id="home" class="simple">
+
+
+    <a href="/home/view?menu=home">Home</a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="home_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/home/view"><img alt="Page" src="/images/icons/page.gif" />&nbsp;bogus_option_to_make_home_menu_show_up</a></li>
+        
+      
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="alerts" class="simple">
+
+
+    <a href="/alerts?menu=alerts">Alerts</a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="alerts_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/alerts"><img alt="Warning" src="/images/icons/warning.gif" />&nbsp;bogus_option_to_make_alerts_menu_show_up</a></li>
+        
+      
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="reporting" class="split">
+
+
+    <a href="/launchpad?menu=reporting">Reporting&nbsp;<img alt="" onclick="return false;" src="/images/down_arrow.gif" /></a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="reporting_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/analytics_view"><img alt="Chart_line" src="/images/icons/chart_line.png" />&nbsp;Analytics</a></li>
+        
+      
+        
+          <li><a href="/download_reports"><img alt="Log_download" src="/images/icons/log_download.gif" />&nbsp;Generate File and Tape Reports</a></li>
+        
+      
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="security" class="split">
+
+
+    <a href="/launchpad?menu=security">Security&nbsp;<img alt="" onclick="return false;" src="/images/down_arrow.gif" /></a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="security_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/certificates/list"><img alt="Script" src="/images/icons/script.gif" />&nbsp;Manage Certificates</a></li>
+        
+      
+        
+          <li><a href="/audit_log/view"><img alt="Secure_logs" src="/images/icons/secure_logs.gif" />&nbsp;View Access Log</a></li>
+        
+      
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="system" class="split">
+
+
+    <a href="/launchpad?menu=system">System&nbsp;<img alt="" onclick="return false;" src="/images/down_arrow.gif" /></a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="system_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/tape_drives"><img alt="Drive" src="/images/icons/drive.gif" />&nbsp;Manage Drives</a></li>
+        
+      
+        
+          <li><a href="/tapes"><img alt="Disk_multiple" src="/images/icons/disk_multiple.gif" />&nbsp;Manage Tapes</a></li>
+        
+      
+        
+          <li><a href="/directories"><img alt="Shield" src="/images/icons/shield.gif" />&nbsp;Manage Directories & Policies</a></li>
+        
+      
+        
+          <li><a href="/system/reboot"><img alt="Reboot_needed" src="/images/icons/reboot_needed.gif" />&nbsp;Reboot Appliance</a></li>
+        
+      
+        
+          <li><a href="/system/shutdown"><img alt="Shutdown16" src="/images/icons/shutdown16.gif" />&nbsp;Shutdown Appliance</a></li>
+        
+      
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="configuration" class="split">
+
+
+    <a href="/launchpad?menu=configuration">Configuration&nbsp;<img alt="" onclick="return false;" src="/images/down_arrow.gif" /></a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="configuration_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/network_file_shares"><img alt="File_share" src="/images/icons/file_share.png" />&nbsp;Manage File Shares</a></li>
+        
+      
+        
+          <li><a href="/nimbus/settings"><img alt="Server_edit" src="/images/icons/server_edit.gif" />&nbsp;Edit System Settings</a></li>
+        
+      
+        
+          <li><a href="/network_configuration/edit"><img alt="Ethernet" src="/images/icons/ethernet.gif" />&nbsp;Edit Network Settings</a></li>
+        
+      
+        
+          <li><a href="/notifications"><img alt="Edit_mail" src="/images/icons/edit_mail.gif" />&nbsp;Configure Notifications</a></li>
+        
+      
+        
+      
+        
+          <li><a href="/storage_location"><img alt="Database_move" src="/images/icons/database_move.png" />&nbsp;Manage Storage Locations</a></li>
+        
+      
+        
+          <li><a href="/configuration/backup_restore"><img alt="Database_save" src="/images/icons/database_save.gif" />&nbsp;Back Up/Restore Configuration</a></li>
+        
+      
+        
+          <li><a href="/snmp"><img alt="Snmp" src="/images/icons/snmp.gif" />&nbsp;Manage SNMP</a></li>
+        
+      
+        
+      
+        
+      
+
+
+        <li class="more">
+          <a href="/launchpad?menu=configuration">more...&nbsp;</a>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+  <li id="help_support" class="split">
+
+
+    <a href="/help?menu=Help%2FSupport">Help/Support&nbsp;<img alt="" onclick="return false;" src="/images/down_arrow.gif" /></a>
+    <div class="subMenu">
+  <div class="menuItem">
+    <div class="content">
+      <ul id="help_support_jumps" class="jumpmenu" style="display:none">
+
+      
+        
+          <li><a href="/help/about"><img alt="Help" src="/images/icons/help.gif" />&nbsp;About StrongBox</a></li>
+        
+      
+        
+          <li><a href="/help/nimbus/crossroads/index.html" target="help"><img alt="Help_set" src="/images/icons/help_set.gif" />&nbsp;View Help Set</a></li>
+        
+      
+        
+          <li><a href="/version/list"><img alt="Versions" src="/images/icons/versions.gif" />&nbsp;Update Version</a></li>
+        
+      
+        
+      
+        
+          <li><a href="/troubleshooting/generate"><img alt="Support" src="/images/icons/support.gif" />&nbsp;Generate Troubleshooting</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+
+        <li class="more">
+          <a href="/help?menu=Help%2FSupport">more...&nbsp;</a>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+</div>
+
+    
+  </li>
+
+        </ul>
+
+    </div>
+
+  <!-- ====================================== STANDARD NAVIGATION ENDS ========================================== -->
+  
+  <!-- ===================================== PRODUCT SPECIFIC STUFF ENDS ========================================= -->
+
+  
+       
+  <!-- ================================== PRODUCT SPECIFIC STUFF ENDS ====================================== -->
+
+  <!-- ========================================== BLACKBOARD BEGINS ============================================ -->
+
+    <div id="blackboard_icon" class="noprint" onmouseover="this.className='over'" onmouseout="this.className=''" onclick="crossroads.togglebb();">
+      <span>
+          <img alt="Notifications" id="bb_icon" src="/images/icons/notify.gif" title="Click to view all notifications" />
+      </span>
+    </div>
+
+    <!-- This is displayed below the blackboard menu item and contains the messages -->
+    <div id="blackboard" class="noprint" style="display: none;">
+      <div class="bbheader"><a href="javascript:;" onclick="crossroads.togglebb();">[X]</a></div>
+
+      <div id="bbcontent"> 
+        <div class="bbe"><em>Loading...</em></div>
+      </div>
+    </div>
+
+
+
+  <!-- ========================================== BLACKBOARD ENDS ============================================ -->
+
+  <!-- ========================================== HEADER ENDS ============================================ -->
+
+  <img alt="Crossroads Systems" id="crds" src="/images/crds_logo.gif" />
+  
+  <h1>
+    <span id='banner'></span>
+  
+      <a href="/launchpad?menu=configuration">Configuration</a> :
+  
+      <a href="/network_file_shares">Manage File Shares</a> :
+  
+  <span id="page_title">mixed_data</span>
+  </h1>
+  
+
+  <div id='contexthelp' style='display:none'>
+  <h3 title="Click to close" onclick="crossroads.toggle_tips()">
+    <span style="float:right">X</span>
+    Tips
+  </h3>
+
+  
+<p>The File View page enables you to view directories and files copied to the share. Click a directory name to view the files contained within. Click <b>..</b> to view the directory above the one that is currently displayed. </p>
+
+
+  <ul id="help_links">
+      <li>
+                <a href="/help/nimbus/crossroads/index.html" onclick="window.open(this.href);return false;">Help & How To</a>      </li>
+          <li>
+                <a href="http://www.crossroads.com/CustomerSupport/CrossroadsSupport.asp" onclick="window.open(this.href);return false;">Crossroads Support</a>      </li>
+          <li>
+        <a href="/help/about">About StrongBox</a>              </li>
+    
+  </ul>
+</div>
+ 
+
+  <div id="content" >
+
+    <div id='flash_wrapper'>
+      
+    </div>
+	  <!-- CONTENT START --> 
+    
+
+
+
+
+<div class="tabbed_pane clearfix">
+  	<h2>File View</h2>
+			
+    <div id="file_navigation_container">
+
+  <div class="breadcrumb_path"></div>
+  <div class="navigation_content">
+  <div id="left_navigation">
+    <div class="header"></div>
+    <div class="dir_navigation"></div>
+  </div>
+  <div id="main_navigation">
+    <table class="file_navigation">
+      <thead>
+    	  <tr>  
+            <th class='ops'></th>
+            <th class='name truncate'>Name</th>
+            <th class='size '>Size</th>
+            <th class='date '>Date</th>
+    	  </tr>				   
+      </thead>
+      </table>
+      <div class="scroll_content">
+      <table>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+FileNavigation.config({root: 3, nodeUrl: '/node'})
+//]]>
+</script>
+
+  </div>
+
+  <!-- Temporary to resolve javascript error -->
+  <div id="reboot_option"></div>
+  
+  <div id="document_bottom"></div>
+</body>
+
+</html>
+

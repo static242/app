@@ -1,0 +1,194 @@
+<!--START File listing -->
+<div data-role="page" id="sb-a">
+	<div data-theme="a" data-role="header"><a href="#defaultpanel" data-role="button" data-inline="true" data-icon="bars">Navigation</a>
+    <a data-role="button" data-inline="true" data-direction="reverse" data-transition="slide" href="#browser" data-icon="back" data-iconpos="left" class="ui-btn-right">back</a>
+		<h3 id="home">Crossroads Systems</h3>
+	</div>
+
+    <div data-role="content">     
+        <img src="images/logo.png">  
+        
+	<script language="javascript"> 
+    jQuery(function(){
+             jQuery('#showall').click(function(){
+                   jQuery('.targetDiv').show();
+            });
+            jQuery('.showSingle').click(function(){
+                  jQuery('.targetDiv').hide();
+                  jQuery('#div'+$(this).attr('target')).show();
+            });
+    });
+    </script>        
+
+<div class="ui-grid-c" id="dirContent">
+       
+    <div class="ui-block-a">
+    <div class="slidingDiv">
+		<ul data-role="listview">
+            <li><a class="showSingle" target="1"><div class="file"><br/><p>file-01.data</p></div></a></li>
+            <li><a class="showSingle" target="2"><div class="file"><br/><p>file-02.data</p></div></a></li>
+            <li><a class="showSingle" target="3"><div class="file"><br/><p>file-03.data</p></div></a></li>
+            <li><a class="showSingle" target="4"><div class="file"><br/><p>file-04.data</p></div></a></li> 
+            <li><a class="showSingle" target="5"><div class="file"><br/><p>file-05.data</p></div></a></li>
+		</ul>
+      </div>
+      </div>
+
+    <div class="ui-block-b">
+    <div class="slidingDiv">
+		<ul data-role="listview">
+            <li><a class="showSingle" target="1"><div class="file"><br/><p>file-06.data</p></div></a></li>
+            <li><a class="showSingle" target="2"><div class="file"><br/><p>file-07.data</p></div></a></li>
+            <li><a class="showSingle" target="3"><div class="file"><br/><p>file-08.data</p></div></a></li>
+            <li><a class="showSingle" target="4"><div class="file"><br/><p>file-09.data</p></div></a></li>
+            <li><a class="showSingle" target="5"><div class="file"><br/><p>file-10.data</p></div></a></li>
+		</ul>
+      </div>
+      </div>
+      
+      <div class="ui-block-c">
+<!--Sameple 1 -->      	
+        <div id="div1" class="targetDiv" style="display: none;">	
+            <table id="checksum" bgcolor="#FFFFFF" cellpadding="10" style="color:#000;" align="left" width="100%">
+            	<tr>
+                	<td colspan="3" valign="top" style="background:#999999;"><h3 style="color:#fff;">File Details</h3></td>
+                </tr>
+                <tr>
+                	<td valign="top" align="left" style="font-size:11px;" width="40%">Name:<br/>
+                    Size:<br/>
+                    Created:<br/>
+                    Updated:<br/>
+                    Checksum:
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;">file-02.data<br/>
+                    1234 bytes<br/>
+                    03/01/2013<br/>
+                    03/25/2013<br/>
+                    010cb3810c
+                    </td>
+                    <td valign="top" align="center"><a data-direction="forward" data-transition="slide" href="#preview2" ><img src="images/preview1.jpg" width="175" height="95"></a><br/>
+                    Preview</a>
+                    </td>
+               </tr>
+          </table>			
+        </div>
+
+<!--Sameple 2 -->      	
+        <div id="div2" class="targetDiv" style="display: none; ">	
+            <table id="checksum" bgcolor="#FFFFFF" cellpadding="10" style="color:#000;" align="left" width="100%">
+            	<tr>
+                	<td colspan="3" valign="top" style="background:#999999;"><h3 style="color:#fff;">File Details</h3></td>
+                </tr>
+                <tr>
+                	<td valign="top" align="left" style="font-size:11px;" width="40%">Name:<br/>
+                    Size:<br/>
+                    Created:<br/>
+                    Updated:<br/>
+                    Checksum:
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;">file-02.data<br/>
+                    1234 bytes<br/>
+                    03/01/2013<br/>
+                    03/25/2013<br/>
+                    8cb138ab3f</td>
+                    <td valign="top" align="center"><a data-direction="forward" data-transition="slide" href="#preview2" ><img src="images/preview2.jpg" width="175" height="95"></a><br/>
+                    Preview</a></td>
+               </tr>
+          </table>			
+        </div>
+
+<!--Sameple 3 -->      	
+        <div id="div3" class="targetDiv" style="display: none; ">	
+            <table id="checksum" bgcolor="#FFFFFF" cellpadding="10" style="color:#000;" align="left" width="100%">
+            	<tr>
+                	<td colspan="3" valign="top" style="background:#999999;"><h3 style="color:#fff;">File Details</h3></td>
+                </tr>
+                <tr>
+                	<td valign="top" align="left" style="font-size:11px;" width="40%">Name:<br/>
+                    Size:<br/>
+                    Created:<br/>
+                    Updated:<br/>
+                    Checksum:
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;">file-02.data<br/>
+                    1234 bytes<br/>
+                    03/01/2013<br/>
+                    03/25/2013<br/>
+                   	bead8c10ce</td>
+                    <td valign="top" align="center"><a data-direction="forward" data-transition="slide" href="#preview2" ><img src="images/preview3.jpg" width="175" height="95"></a><br/>
+                    Preview</a></td>
+               </tr>
+          </table>			
+        </div> 
+        
+<!--Sameple 4 -->      	
+        <div id="div4" class="targetDiv" style="display: none; ">	
+            <table id="checksum" bgcolor="#FFFFFF" cellpadding="10" style="color:#000;" align="left" width="100%">
+            	<tr>
+                	<td colspan="3" valign="top" style="background:#999999;"><h3 style="color:#fff;">File Details</h3></td>
+                </tr>
+                <tr>
+                	<td valign="top" align="left" style="font-size:11px;" width="40%">Name:<br/>
+                    Size:<br/>
+                    Created:<br/>
+                    Updated:<br/>
+                    Checksum:
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;">file-02.data<br/>
+                    1234 bytes<br/>
+                    03/01/2013<br/>
+                    03/25/2013<br/>
+                   	83b136510f</td>
+                    <td valign="top" align="center"><a data-direction="forward" data-transition="slide" href="#preview2" ><img src="images/preview4.jpg" width="175" height="95"></a><br/>
+                    Preview</a></td>
+               </tr>
+          </table>			
+        </div>       
+
+<!--Sameple 5 -->      	
+        <div id="div5" class="targetDiv" style="display: none;">	
+            <table id="checksum" bgcolor="#FFFFFF" cellpadding="10" style="color:#000;" align="left" width="100%">
+            	<tr>
+                	<td colspan="3" valign="top" style="background:#999999;"><h3 style="color:#fff;">File Details</h3></td>
+                </tr>
+                <tr>
+                	<td valign="top" align="left" style="font-size:11px;" width="40%">Name:<br/>
+                    Size:<br/>
+                    Created:<br/>
+                    Updated:<br/>
+                    Checksum:
+                    </td>
+                    <td valign="top" align="left" style="font-size:11px;">file-02.data<br/>
+                    1234 bytes<br/>
+                    03/01/2013<br/>
+                    03/25/2013<br/>
+                   	cae832d5ef</td>
+                    <td valign="top" align="center"><a data-direction="forward" data-transition="slide" href="#preview2" ><img src="images/preview5.jpg" width="175" height="95"></a><br/>
+                    Preview</a></td>
+               </tr>
+          </table>			
+        </div> 
+ <!-- End Samples -->
+	</div>
+
+</div>        
+
+</div>
+         <!-- defaultpanel -->
+        <div data-role="panel" id="defaultpanel" data-theme="a">
+            <div class="panel-content">
+                <ul data-role="listview" data-theme="a" class="nav-search">
+                	<li data-icon="delete"><a href="#demo-links" data-rel="close">Close Menu</a></li>
+                    <li data-theme="ui-bar-a" data-icon="home"><a href="#Home" data-transition="slide">Home</a></li>
+                    <li data-theme="ui-bar-a"><a href="#browser" data-transition="slide">File Browser</a></li>
+                    <li data-theme="ui-bar-a"><a href="#media" data-transition="slide">Import Media</a></li>
+                </ul>    
+            </div><!-- /content wrapper for padding -->
+        </div><!-- /defaultpanel -->
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    <h3>Connected to: sbox-ws-001</h3>
+    </div>
+</div>
+
+<!--END SB-A -->

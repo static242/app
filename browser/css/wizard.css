@@ -1,0 +1,266 @@
+/* ----------------------------------
+*
+* Styles used by nimbus Tape Archive to display the wizard
+*
+* Based on the Control.Window library at http://livepipe.net/control/window
+*
+-------------------------------------*/
+
+#control_overlay {
+  background-color: black;
+}
+
+.wizard_dialog {
+  width:900px;
+  height:575px;
+  background-color:#fff;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #999;
+}
+
+#wizard {
+  position: relative;
+  height:575px;
+}
+
+#wizard .header h1 {
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  
+  padding-left: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;  
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #1D3A62 url("/images/wizard_bkg.gif") repeat-x bottom;
+}
+
+#wizard .header a.wizard_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 16px;
+  height: 20px;
+  font-weight: bold;
+  color: #f4f4f4;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;  
+}
+
+#wizard .header a.wizard_close:hover {
+  text-decoration: none;
+  color: #999;
+}
+
+#wizard ul.steps {
+  border-bottom: 1px solid #999;  
+  margin: 0px;
+  background-color: #f4f4f4;
+  list-style: none;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+#wizard ul.steps li {
+  display: inline;
+  float: left;
+  background: url("/images/wizard_steps_bkg.gif") no-repeat right center;
+  padding: 0 30px 0 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+#wizard ul.steps li.current {
+  font-weight: bold;
+}
+
+#wizard .panel {
+  overflow: auto;
+}
+
+#wizard .help, #wizard .content {
+  margin: 15px;
+  font-weight: normal;
+  float: left;
+  height: 400px;
+}
+
+#wizard .error {
+  color: red;
+  font-size: 14px;
+}
+
+#wizard .help {
+  width: 220px;
+  border-right: 1px dotted #ccc;
+  font-size: 14px;
+  color: #666;
+  padding-right: 10px;
+}
+
+#wizard .content {  
+  width: 580px;
+  font-size: 16px;
+	overflow: auto;
+}
+
+#wizard .content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+}
+
+#wizard .content h4 {
+  font-style: italic;
+  margin: 10px 0px;
+}
+
+#wizard .content li, #wizard .content p {
+  margin-bottom: 0.8em;
+}
+
+#wizard .content input, #wizard .content label, #wizard .content select, #datetime_selects {
+  float: left;
+  display: block;
+}
+
+#wizard input[disabled] {
+  background: #eee;
+  color: #4A6E91;
+  font-style: italic;
+}
+
+#wizard #send_test_email_button {
+  margin-top: 1.2em;
+}
+
+#wizard #test_address_result {
+  float: left;
+  font-style: italic;
+  font-size: 13px;
+  margin: 1em;
+  width: 350px;
+}
+
+#wizard #netconfig_indicator {
+	text-align:center; 
+	padding:.5em; 
+	margin-top: 9.5em;
+	margin-left: 5em;
+	color:#fff; 
+	font-style:oblique; 
+	background-color:#1D3A62; 
+	overflow:hidden; 
+	position:fixed !important; 
+	position:absolute;
+}
+
+#wizard .content label.radio {
+  width: 500px;
+  text-align: left;
+}
+
+#wizard .content input.radio {
+  margin: 5px 5px 0 0;
+}
+
+/* display these guys inline so the : and - text displays correctly */
+#wizard .content #datetime_selects > select {
+  float: none !important;
+  display: inline;
+  margin: 0 5px;
+}
+
+#wizard .content input, #wizard .content select {
+  padding: 4px;
+  font-size: 13px;    
+  margin-bottom: 10px;  
+}
+
+#wizard .content .fieldWithErrors span {
+  display: block;
+  float: left;
+  margin: 6px;
+}
+
+#wizard .content .fieldWithErrors input {
+  border-color: red;
+}
+
+#wizard .content .fieldWithErrors br, #wizard .content .fieldWithErrors label {
+  display: none;
+}
+
+#wizard .content label {
+  text-align: right;
+  margin-right: 5px;
+  width: 9em;
+  line-height: 24px;
+}
+
+#wizard .content .required {
+  color: red;
+}
+
+#wizard .footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  background: #1D3A62 url("/images/wizard_bkg.gif") repeat-x bottom;
+  
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#wizard .footer #wizard_spinner {
+  float: left;
+  margin: 13px;
+}
+
+
+#wizard .footer a {
+  float: right;
+  width: 100px;
+  padding: 5px;
+  border: 1px solid #999;
+  background-color: #f4f4f4;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#wizard .footer a:hover {
+  color: #12549E;
+  -webkit-transition: color 0.3s ease;    
+}
+
+
+
+
+
